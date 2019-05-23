@@ -1,0 +1,50 @@
+*
+{
+    background-color: burlywood;
+}
+a
+{
+
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin:0 auto;
+    padding: 5px;
+    font: small-caps 100%/200% serif;
+
+}
+h1
+{
+    text-align: center; 
+}
+
+th,b,strong
+{
+    font: small-caps 100%/200% serif;
+}
+
+img,h4
+{
+    padding: 10px; margin: 10px; 
+    border: 2px solid rgb(177, 69, 69); 
+    float: right; width: 250px;
+}
+form
+{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin:0 auto;
+    padding: 20px;
+    font: small-caps 100%/200% serif;
+} 
+#asunto,#mensaje
+{
+    
+    width: 700px;
+    height: 150px;
+    text-align: center;
+    margin:0 auto;
+    padding: 5px;
+    font: small-caps 100%/200% serif;
+}

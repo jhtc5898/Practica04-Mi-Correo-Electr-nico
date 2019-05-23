@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nuevo Mensajes </title>
+        <link type="text/css" href="Css/styleusuario.css" rel="stylesheet">
+      
+    </head>
+    <header>
+    <h1>Nuevo Mensaje</h1>
+    <br>
+    <a href="index.php"> &bull; Inicio  </a>
+    <a href="NuevoMensaje.html"> &bull; Nuevo Mensaje  </a>
+    <a href="MensajesEnviados.php"> &bull; Mensajes Enviados </a>
+    <a href="micuenta.php">&bull; Mi Cuenta  </a>
+</header>
+    <body>
+    <form id="formulario1" method="POST" action="NuevoMensaje.php">
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese El Correo Del Destinatario" required/>
+    
+            <br>
+    
+
+        <label for="asunto">Asunto </label>
+        <input type="text" id="asunto" name="asunto" value="" placeholder="Ingrese sus Asunto" required/>
+
+        <br>
+
+        <label for="mensaje">Mensaje </label>
+        <input type="text" id="mensaje" name="mensaje" value="" placeholder="Ingrese su Mensaje" required/>
+
+        <br>
+        
+        <input type="submit" id="crear" name="crear" value="Enviar" />
+        <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+
+        </form>
+    </body>
+    </html>

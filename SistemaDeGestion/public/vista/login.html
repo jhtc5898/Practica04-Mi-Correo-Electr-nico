@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Iniciar Sesion</title>
+        <link type="text/css" href="Css/stylepublic.css" rel="stylesheet">
+    </head>
+    <body>
+        <form id="formulario1" method="POST" action="../controladores/login.php">
+            <label for="correo">Correo electronico</label>
+            <input type="text" id="correo" name="correo" value="" placeholder="Ingrese su correo"/>
+            <br>
+
+            <label for="nombres">Contrasena</label>
+            <input type="password" id="contraseña" name="contraseña" value="" placeholder="Ingrese su contrasena"/>
+
+            <br>
+
+            <input type="submit" id="login" name="login" value="Iniciar Sesion"/>
+
+            <a href="../vista/crear_usuario.html"><input type="button" value="Crear Usuario"></a>
+
+            
+        </form>
+    </body>
+</html>
