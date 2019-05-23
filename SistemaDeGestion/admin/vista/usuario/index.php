@@ -41,6 +41,7 @@
         <a href="NuevoMensaje.html"> &bull; Nuevo Mensaje  </a>
         <a href="MensajesEnviados.php"> &bull; Mensajes Enviados </a>
         <a href="micuenta.php">&bull; Mi Cuenta  </a>
+        <a href="cerrar_sesion.php">&bull; Cerrar Sesion  </a>
     </header>
     <body>
         <table style="width:100%" border=1>
@@ -76,30 +77,11 @@
 
             <div id="informacion"><b> Datos De Las Personas </b></div>
 
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <?php
                 session_start();
                 include "../../../config/conexionBD.php";
-                $sql ="SELECT * FROM mensajeria  WHERE men_destinatario = '$grabado' ";
+                $sql ="SELECT * FROM mensajeria  WHERE men_destinatario = '$grabado'  order by men_fecha_creacion DESC  ";
               
 
                 
@@ -120,36 +102,7 @@
                        
                     }
                   
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
                 }else{
                     echo "<tr>";
                     echo " <td colspan='7'>No existen Mensajes en el Sistema </td>";

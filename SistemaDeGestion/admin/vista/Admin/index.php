@@ -27,6 +27,7 @@
         <br>
         <a href="index.php"> &bull; Inicio  </a>
         <a href="micuenta.php">&bull; Mi Cuenta  </a>
+        <a href="cerrar_sesion.php">&bull; Cerrar Sesion  </a>
     </header>
     <body>
     <h1>MENSAJES</h1>
@@ -59,7 +60,7 @@
             <?php
                 session_start();
                 include "../../../config/conexionBD.php";
-                $sql ="SELECT * FROM mensajeria   ";
+                $sql ="SELECT * FROM mensajeria order by  men_fecha_creacion DESC   ";
               
 
                 

@@ -20,10 +20,6 @@
     
         echo "<form id='formulario2' method='POST' action='contrasena.php?codigo=$codigo'>";
 
-        echo "<label for='contraseña'>Contrasena Anterior</label>";
-        echo "<input  type='password' id='contraseña' name='contraseña' value='' required/>";
-        echo "<br>";
-
         echo  " <label for='contraseña'>Nueva Contrasena </label>";
         echo "  <input type='password' id='nueva_contraseña' name='nueva_contraseña' value=''  required/>";
 

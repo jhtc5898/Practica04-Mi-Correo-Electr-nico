@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <title>Crear Usuario</title>
     <link type="text/css" href="Css/stylepublic.css" rel="stylesheet">
-
+    <script type="text/javascript" src="Js/Validacion.js"></script>
+      
 </head>
 <header>
     <h1>Creacion De Nuevos Usuarios</h1>
 </header>
 <body >
-    <form id="formulario1" method="POST" action="../controladores/crear_usuario.php">
+    <form id="formulario01" method="POST" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
         <label for="cedula">Cedula </label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el numero de cedula" required/>
-        
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el numero de cedula" onkeyup  ="return validarnumeros(this)" required/>
+        <span id="mensajeCedula" class="error"></span>
         <br>
 
         <label for="nombres">Nombres </label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres" required/>
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres" onkeyup  ="return validarLetras(this)" required/>
 
         <br>
 
         <label for="apellidos">Apellido </label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos" required/>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos" onkeyup  ="return validarLetras(this)" required/>
 
         <br>
 
@@ -32,7 +33,7 @@
         <br>
 
         <label for="telefono">Telefono </label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su numero telefonico" required/>
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su numero telefonico" onkeyup  ="return validartelefono(this)" required/>
 
         <br>
         
@@ -42,7 +43,7 @@
         <br>
 
         <label for="correo">Correo Electronico</label>
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electronico" required/>
+        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electronico" onkeyup  ="return validartodocorreo(this)" required/>
 
         <br>
 

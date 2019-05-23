@@ -30,10 +30,21 @@
 
 
     <?php
+     session_start();
+     if ($_SESSION['codigo'])
+     {
+                 $codigo=$_SESSION['codigo']; //Si existe un nickname generamos el mensaje
+     }
+     
+else
+     {
+                 $codigo="<h1>No se Guardo<h1>"; //Mensaje que no existe nada Grabado
+     }
+
     $cedula = $_GET['cedula'];
     
     include "..\..\..\config\conexionBD.php";
-    $sql="SELECT * FROM mensajeria WHERE men_remitente LIKE ('%$cedula%')";
+    $sql="SELECT * FROM mensajeria WHERE men_remitente LIKE ('%$cedula%') AND usu_codigo = '$codigo'";
     
     $result = $conn->query($sql);
     if($result->num_rows>0){

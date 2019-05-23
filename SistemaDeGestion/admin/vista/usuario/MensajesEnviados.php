@@ -56,24 +56,6 @@
 
 
             </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
             <form>
             <input type="text" id="cedula" name="cedula" value="" placeholder="Buscar:Correo" onkeyup="buscarPorCorreo()">
             </form>
@@ -82,28 +64,10 @@
             <div id="informacion"><b> Datos De Los Correos Enviados </b></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <?php
                 session_start();
                 include "../../../config/conexionBD.php";
-                $sql ="SELECT * FROM mensajeria  WHERE usu_codigo = '$codigo'";
+                $sql ="SELECT * FROM mensajeria  WHERE usu_codigo = '$codigo' order by men_fecha_creacion DESC";
               
 
                 
